@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Driver's daily log</h1>
+    <section id="departure-info-section">
+        <div id="store-info">
+            <label for="store-name">Store name</label>
+            <select name="store-name" id="store-name">
+                <option value="test">test</option>
+                <option value="test2">test2</option>
+            </select>
+            <label for="seal-number">Seal</label>
+            <input type="numberic" name="seal-number" id="seal-number">
+            <button id="submit-store-info">Submit</button>
+        </div>
+        
+        <div id="departure-varification">
+            <div id="id-verification">
+                <label for="login-varification">ID</label>
+                <input type="text" name="login-varification" id="login-varification">
+                <button id="submit-id-verification">Submit</button>
+            </div>
+            <div id="depart-time">
+                <label for="time-depart">Time depart</label>
+                <input type="time" id="time-depart">
+                <button id="submit-time">Submit</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="departed-section">
+        <h2>Okay, that works</h2>
+    </section>
+
+    
+    <script src="index.js" type="module"></script>
+</body>
+</html>
