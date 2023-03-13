@@ -1,0 +1,4 @@
+- generate the store list with JS ********** DONE
+- Make an array object that stores the drivers route info
+- Make popups for store departue
+- Make gaurd login info

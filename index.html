@@ -9,12 +9,20 @@
 </head>
 <body>
     <h1>Driver's daily log</h1>
+    
+    <section id="driver-login">
+        <label for="driver-name">Driver's Name:</label>
+        <input type="text" name="driver-name" id="driver-name">
+        <label for="driver-password">Password: </label>
+        <input type="password" name="driver-password" id="driver-password">
+        <button id="submit-driver-login">Submit</button>
+    </section>
+
     <section id="departure-info-section">
         <div id="store-info">
             <label for="store-name">Store name</label>
             <select name="store-name" id="store-name">
-                <option value="test">test</option>
-                <option value="test2">test2</option>
+                <!-- JS makes this -->
             </select>
             <label for="seal-number">Seal</label>
             <input type="numberic" name="seal-number" id="seal-number">
