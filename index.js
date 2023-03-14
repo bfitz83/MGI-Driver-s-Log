@@ -27,12 +27,11 @@ document.addEventListener("click", function(e){
     if (e.target.id === "submit-driver-login") {
         // This is a basic login to be replaced with a SQL database
         if (driverName.value === loginInfo[0].name && driverPassword.value === loginInfo[0].passWord){
-        document.getElementById("driver-login").style.display = "none"
-        document.getElementById("departure-info-section").style.display = "flex"
-        
-        logInDriver(driverName)
-    }
-        } else if (e.target.id === "submit-store-info"){
+            document.getElementById("driver-login").style.display = "none"
+            document.getElementById("departure-info-section").style.display = "flex"
+            logInDriver(driverName)
+        }
+    } else if (e.target.id === "submit-store-info"){
         // add a pop up that diplays any road problems
         document.getElementById("departure-varification").style.display = "flex"
         document.getElementById("store-info").style.display = "none"
