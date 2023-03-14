@@ -26,14 +26,14 @@ const storeName = document.getElementById("store-name")
 document.addEventListener("click", function(e){
     if (e.target.id === "submit-driver-login") {
         // This is a basic login to be replaced with a SQL database
-        //      maybe use filter() ?
         if (driverName.value === loginInfo[0].name && driverPassword.value === loginInfo[0].passWord){
         document.getElementById("driver-login").style.display = "none"
         document.getElementById("departure-info-section").style.display = "flex"
-        // change the driver's logged in info in logincredentials
-        // add a pop up that diplays any road problems
+        
+        logInDriver(driverName)
     }
-    } else if (e.target.id === "submit-store-info"){
+        } else if (e.target.id === "submit-store-info"){
+        // add a pop up that diplays any road problems
         document.getElementById("departure-varification").style.display = "flex"
         document.getElementById("store-info").style.display = "none"
     } else if (e.target.id === "yes-depart-btn") {
@@ -44,3 +44,16 @@ document.addEventListener("click", function(e){
         document.getElementById("departure-info-section").style.display = "none"
     }
 })
+
+// This function now changes the logged in driver isLogedIn to true. 
+
+    function logInDriver(names){
+        console.log(names.value)
+        let driverLoggedIn = loginInfo.filter(function(info){
+            return info.name === names.value
+        })
+        driverLoggedIn[0].isLogedIn = true
+        console.log(driverLoggedIn)
+    }
+
+// Next steps: use isLogedIn to start the log report and change the code above to check over the array for who is logging in
