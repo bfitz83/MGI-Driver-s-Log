@@ -7,20 +7,7 @@ import { storeData } from "./storeData.js" // Just the store information
     const driverPassword = document.getElementById("driver-password")// this is the PW input from the login page 
     const storeName = document.getElementById("store-name")
 
-// this function makes the store list for the driver to select. As this project progresses 
-//      there will be a seperate login page so that more store information 
-//      can be added without changing the code.
 
-    function renderStoreList(){
-        // you need a for each to make this better ***********************************
-        for (let i = 0; i < storeData.length; i++){
-            let storeList = document.createElement("option")
-            storeList.innerText = `${storeData[i].storeNumber} ${storeData[i].storeName}`
-            storeName.appendChild(storeList)
-        }
-    }
-
-    renderStoreList()
 
 // This event listener section controls the displays of the different sections and the
 //      sets the following funcitons into motion
@@ -53,6 +40,20 @@ import { storeData } from "./storeData.js" // Just the store information
     })
 
 // **********FUNCTIONS********** 
+
+    // this function makes the store list for the driver to select. As this project progresses 
+    //      there will be a seperate login page so that more store information 
+    //      can be added without changing the code.
+        function renderStoreList(){
+            // you need a for each to make this better ***********************************
+            for (let i = 0; i < storeData.length; i++){
+                let storeList = document.createElement("option")
+                storeList.innerText = `${storeData[i].storeNumber} ${storeData[i].storeName}`
+                storeName.appendChild(storeList)
+            }
+        }
+
+        renderStoreList()
 
     // This function now changes the logged in driver isLogedIn to true. 
     //      When isLogedIn is true it allows all other info to be gathered into
