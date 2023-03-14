@@ -35,9 +35,12 @@ document.addEventListener("click", function(e){
     }
     } else if (e.target.id === "submit-store-info"){
         document.getElementById("departure-varification").style.display = "flex"
-    } else if (e.target.id === "submit-id-verification") {
+        document.getElementById("store-info").style.display = "none"
+    } else if (e.target.id === "yes-depart-btn") {
         document.getElementById("depart-time").style.display = "flex"
+        document.getElementById("id-verification").style.display = "none"
     } else if (e.target.id === "submit-time") {
         document.getElementById("departed-section").style.display = "flex"
+        document.getElementById("departure-info-section").style.display = "none"
     }
 })
