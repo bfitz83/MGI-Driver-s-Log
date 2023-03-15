@@ -30,9 +30,12 @@ let routeInfo = {}
         } 
         // This submits the store information to the driver log
         else if (e.target.id === "submit-store-info"){
-            // add a pop up that diplays any road problems
+            // add a pop up that diplays any road problems ************************************
             document.getElementById("departure-varification").style.display = "flex"
             document.getElementById("store-info").style.display = "none"
+            
+            // seperate into it's own funciton ******************************************* 
+            
             routeInfo["store"] = storeName.value 
             routeInfo["seal"] = sealNumber.value
             
@@ -77,10 +80,20 @@ let routeInfo = {}
             console.log(routeInfo)
         }
 
-// Next steps: use isLogedIn to start the log report and change the code above to check over 
-//      the array for who is logging in
+// Next step:
+//  -make the code read the current time on computer and store it
 
-//This function will push the info from the other screens
+
+
+
+
+
+
+
+
+
+
+// Don't need this for now but might be usefull ***********************
 
 // function createDriverLogForm(){
 //     // This works for creating an object in the array. now figure out the order needed.

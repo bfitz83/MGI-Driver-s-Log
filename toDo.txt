@@ -1,5 +1,5 @@
 - generate the store list with JS ********** DONE
-- Make an array object that stores the drivers route info
+- Make an array object that stores the drivers route info ********** DONE
 - Make popups for store departue
 - Make gaurd login info ********** kinda done
 
@@ -12,4 +12,4 @@ So far, this is the order for departure:
 
 Next step:
     - make the departed-section show the time that the driver left
-    - input all of the info into an array
+    - input all of the info into an array  ********** DONE EXCEPT FOR LOGGING THE TIME
