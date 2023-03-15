@@ -10,7 +10,7 @@ import { storeData } from "./storeData.js" // Just the store information
 
 let driverLogForm = []
 
-// routeInfo still needs signature, time depart, time arrive, and time back 
+// routeInfo still needs signature, time depart, time arrive, and time back *******************
 
 let routeInfo = {}
 
