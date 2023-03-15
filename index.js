@@ -82,6 +82,7 @@ let routeInfo = {}
 
 // Next step:
 //  -make the code read the current time on computer and store it
+//  -make it so driver has to enter info
 
 
 
