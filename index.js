@@ -6,6 +6,13 @@ import { storeData } from "./storeData.js" // Just the store information
     const driverName = document.getElementById("driver-name") // this is the name input from the login page
     const driverPassword = document.getElementById("driver-password")// this is the PW input from the login page 
     const storeName = document.getElementById("store-name")
+    const sealNumber = document.getElementById("seal-number")
+
+let driverLogForm = []
+
+// routeInfo still needs signature, time depart, time arrive, and time back 
+
+let routeInfo = {}
 
 
 
@@ -26,6 +33,9 @@ import { storeData } from "./storeData.js" // Just the store information
             // add a pop up that diplays any road problems
             document.getElementById("departure-varification").style.display = "flex"
             document.getElementById("store-info").style.display = "none"
+            routeInfo["store"] = storeName.value 
+            routeInfo["seal"] = sealNumber.value
+            
         } 
         // This submits the departure signature info to the driver log
         else if (e.target.id === "yes-depart-btn") {
@@ -63,7 +73,19 @@ import { storeData } from "./storeData.js" // Just the store information
                 return info.name === names.value
             })
             driverLoggedIn[0].isLogedIn = true
+            routeInfo["name"] = driverLoggedIn[0].name
+            console.log(routeInfo)
         }
 
 // Next steps: use isLogedIn to start the log report and change the code above to check over 
 //      the array for who is logging in
+
+//This function will push the info from the other screens
+
+// function createDriverLogForm(){
+//     // This works for creating an object in the array. now figure out the order needed.
+
+//     driverLogForm.push({"store": storeData[0].storeName})
+// }
+
+
