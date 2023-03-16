@@ -11,5 +11,5 @@ So far, this is the order for departure:
     - Magic
 
 Next step:
-    - make the departed-section show the time that the driver left
+    - make the departed-section show the time that the driver left ********** DONE
     - input all of the info into an array  ********** DONE EXCEPT FOR LOGGING THE TIME

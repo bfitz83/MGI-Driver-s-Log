@@ -7,17 +7,26 @@ import { storeData } from "./storeData.js" // Just the store information
     const driverPassword = document.getElementById("driver-password")// this is the PW input from the login page 
     const storeName = document.getElementById("store-name")
     const sealNumber = document.getElementById("seal-number")
+    const signatureVerification = document.getElementById("signature-verification")
+    const departedSection = document.getElementById("departed-section")
 
 let driverLogForm = []
 
-// routeInfo still needs signature, time depart, time arrive, and time back *******************
+// routeInfo still needs time arrive, and time back *******************
 
 let routeInfo = {}
+const d = new Date().toLocaleTimeString() // this is the current time
+
+
 
 
 
 // This event listener section controls the displays of the different sections and the
 //      sets the following funcitons into motion
+
+        // FOR ALL BELOW: ************************************************************
+
+            // you need to seperate things into their own function to clean up
 
     document.addEventListener("click", function(e){
         if (e.target.id === "submit-driver-login") {
@@ -44,11 +53,20 @@ let routeInfo = {}
         else if (e.target.id === "yes-depart-btn") {
             document.getElementById("depart-time").style.display = "flex"
             document.getElementById("id-verification").style.display = "none"
+
+            
         } 
         // This submits the time to the driver's log
         else if (e.target.id === "submit-time") {
             document.getElementById("departed-section").style.display = "flex"
             document.getElementById("departure-info-section").style.display = "none"
+            
+            // Make function ********************************************************
+            
+            routeInfo["depart"] = d
+            routeInfo["signature"] = signatureVerification.value
+            console.log(routeInfo.signature)
+            createDriverLog()
         }
     })
 
@@ -77,11 +95,22 @@ let routeInfo = {}
             })
             driverLoggedIn[0].isLogedIn = true
             routeInfo["name"] = driverLoggedIn[0].name
-            console.log(routeInfo)
         }
 
+function createDriverLog(){
+    console.log(routeInfo)
+    departedSection.innerHTML = 
+    `
+        <h2>${routeInfo.name}'s daily log</h2>
+        <p>Store: ${routeInfo.store}</p>
+        <p>Seal number: ${routeInfo.seal}</p>
+        <p>Time depart: ${routeInfo.depart}</p>
+        <p>Sealed by: ${routeInfo.signature}</p> 
+    `
+}
+
 // Next step:
-//  -make the code read the current time on computer and store it
+//  -push route info into driverLogForm
 //  -make it so driver has to enter info
 
 

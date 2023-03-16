@@ -9,22 +9,28 @@ body {
     margin: 0;
 }
 
-#departure-info-section {
-    display: none;
-}
-
-#departure-varification {
-    display: none;
-}
-
+#driver-login, 
+#store-info,
+#id-verification,
+#departed-section,
 #depart-time {
-    display: none;
+    display: flex;
+    flex-direction: column;
 }
 
-#departed-section {
-    display: none;
+#id-verification div{
+    display: flex;
+    justify-content: center;
 }
 
+#departure-info-section,
+#departure-varification,
+#depart-time,
 #road-conditions {
     display: none;
+}
+
+button {
+    margin: 5px;
+    padding: 4px 8px;
 }
