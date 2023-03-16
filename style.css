@@ -26,7 +26,10 @@ body {
 #departure-info-section,
 #departure-varification,
 #depart-time,
-#road-conditions {
+#road-conditions,
+#store-arival,
+#store-depart,
+#return-arival {
     display: none;
 }
 

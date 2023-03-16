@@ -17,10 +17,6 @@ let driverLogForm = []
 let routeInfo = {}
 const d = new Date().toLocaleTimeString() // this is the current time
 
-
-
-
-
 // This event listener section controls the displays of the different sections and the
 //      sets the following funcitons into motion
 
@@ -47,25 +43,42 @@ const d = new Date().toLocaleTimeString() // this is the current time
             
             routeInfo["store"] = storeName.value 
             routeInfo["seal"] = sealNumber.value
-            
         } 
         // This submits the departure signature info to the driver log
         else if (e.target.id === "yes-depart-btn") {
             document.getElementById("depart-time").style.display = "flex"
             document.getElementById("id-verification").style.display = "none"
-
-            
         } 
         // This submits the time to the driver's log
         else if (e.target.id === "submit-time") {
-            document.getElementById("departed-section").style.display = "flex"
-            document.getElementById("departure-info-section").style.display = "none"
+            document.getElementById("depart-time").style.display = "none"
+            document.getElementById("store-arival").style.display = "flex"
             
             // Make function ********************************************************
             
             routeInfo["depart"] = d
             routeInfo["signature"] = signatureVerification.value
-            console.log(routeInfo.signature)
+        }
+        // This submits the time driver arived at store
+        else if (e.target.id === "arival-conformation-btn"){
+            document.getElementById("store-arival").style.display = "none"
+            document.getElementById("store-depart").style.display = "flex"
+            
+            routeInfo["storeArival"] = d
+        }
+        // This submits time driver left store
+        else if (e.target.id === "store-depart-btn"){
+            document.getElementById("store-depart").style.display = "none"
+            document.getElementById("return-arival").style.display = "flex"
+
+            routeInfo["storeDepart"] = d
+        }
+        // this submits the time the driver returned to the yard
+        else if (e.target.id === "yard-arival-btn"){
+            document.getElementById("return-arival").style.display = "none"
+            document.getElementById("departed-section").style.display = "flex"
+
+            routeInfo["yardArival"] = d
             createDriverLog()
         }
     })
@@ -98,20 +111,23 @@ const d = new Date().toLocaleTimeString() // this is the current time
         }
 
 function createDriverLog(){
-    console.log(routeInfo)
     departedSection.innerHTML = 
     `
         <h2>${routeInfo.name}'s daily log</h2>
         <p>Store: ${routeInfo.store}</p>
         <p>Seal number: ${routeInfo.seal}</p>
         <p>Time depart: ${routeInfo.depart}</p>
-        <p>Sealed by: ${routeInfo.signature}</p> 
+        <p>Sealed by: ${routeInfo.signature}</p>
+        <p>Store arival: ${routeInfo.storeArival}</p>
+        <p>Store depart: ${routeInfo.storeDepart}</p>
+        <p>MGI arival: ${routeInfo.yardArival}</p> 
     `
+    driverLogForm.push(routeInfo)
+    console.log(driverLogForm)
 }
 
 // Next step:
-//  -push route info into driverLogForm
-//  -make it so driver has to enter info
+//  -make it so driver has to enter info needed
 
 
 
