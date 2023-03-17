@@ -1,15 +1,11 @@
-- generate the store list with JS ********** DONE
-- Make an array object that stores the drivers route info ********** DONE
-- Make popups for store departue
-- Make gaurd login info ********** kinda done
-
-
 So far, this is the order for departure:
     - The driver logs in
     - The store info and seal are entered
     - Either the driver or the gaurd enter their info
+    - Driver then enters store arival, depart, and yard arival
     - Magic
 
 Next step:
-    - make the departed-section show the time that the driver left ********** DONE
-    - input all of the info into an array  ********** DONE EXCEPT FOR LOGGING THE TIME
+    - draw route info from drivers log instead of route info
+    - clean up the UI
+    - Make popups for store departue that show problems

@@ -5,10 +5,10 @@ import { storeData } from "./storeData.js" // Just the store information
 
     const driverName = document.getElementById("driver-name") // this is the name input from the login page
     const driverPassword = document.getElementById("driver-password")// this is the PW input from the login page 
-    const storeName = document.getElementById("store-name")
-    const sealNumber = document.getElementById("seal-number")
-    const signatureVerification = document.getElementById("signature-verification")
-    const departedSection = document.getElementById("departed-section")
+    const storeName = document.getElementById("store-name") // this is the drop down menu for store list
+    const sealNumber = document.getElementById("seal-number") // this is the seal number input
+    const signatureVerification = document.getElementById("signature-verification") // this is the separt signature
+    const departedSection = document.getElementById("departed-section") // for now this shows the log of 1 route
 
 let driverLogForm = []
 
@@ -128,6 +128,8 @@ function createDriverLog(){
 
 // Next step:
 //  -make it so driver has to enter info needed
+//  -pull info from drivers log instead of route info
+//  -make the problems pop up section
 
 
 
