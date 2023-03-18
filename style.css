@@ -7,13 +7,53 @@ body {
     height: 100vh;
     padding: 0;
     margin: 0;
+    background-color: rgb(133, 139, 140);
+}
+
+main {
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin: 5px 5px 60px 5px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+input {
+    background-color: rgb(209, 227, 227);
+}
+
+button {
+    font-weight: bold;
+    padding: 4px 8px;
+    margin: 5px;
+    background-color: rgb(175, 184, 181);
 }
 
 #driver-login, 
 #store-info,
 #id-verification,
 #departed-section,
-#depart-time {
+#depart-time,
+#id-verification,
+#store-arival,
+#store-depart,
+#return-arival {
     display: flex;
     flex-direction: column;
 }

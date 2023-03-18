@@ -114,13 +114,13 @@ function createDriverLog(){
     departedSection.innerHTML = 
     `
         <h2>${routeInfo.name}'s daily log</h2>
-        <p>Store: ${routeInfo.store}</p>
-        <p>Seal number: ${routeInfo.seal}</p>
-        <p>Time depart: ${routeInfo.depart}</p>
-        <p>Sealed by: ${routeInfo.signature}</p>
-        <p>Store arival: ${routeInfo.storeArival}</p>
-        <p>Store depart: ${routeInfo.storeDepart}</p>
-        <p>MGI arival: ${routeInfo.yardArival}</p> 
+        <p><b>Store:</b> ${routeInfo.store}</p>
+        <p><b>Seal number:</b> ${routeInfo.seal}</p>
+        <p><b>Time depart:</b> ${routeInfo.depart}</p>
+        <p><b>Sealed by:</b> ${routeInfo.signature}</p>
+        <p><b>Store arival:</b> ${routeInfo.storeArival}</p>
+        <p><b>Store depart:</b> ${routeInfo.storeDepart}</p>
+        <p><b>MGI arival:</b> ${routeInfo.yardArival}</p> 
     `
     driverLogForm.push(routeInfo)
     console.log(driverLogForm)
@@ -130,6 +130,8 @@ function createDriverLog(){
 //  -make it so driver has to enter info needed
 //  -pull info from drivers log instead of route info
 //  -make the problems pop up section
+//  -make a way to correct info
+//  -add the date to the log
 
 
 
