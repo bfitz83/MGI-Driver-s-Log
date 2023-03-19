@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "MGI Driver Log DB",
+            "database": "sql_driver_info",
+            "username": "root",
+            "password": "040283abD!"
+        }
+    ]
+}
